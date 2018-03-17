@@ -18,7 +18,7 @@ request(process.argv[2],
     }
   }, function (error, response, body) {
     if (error) {
-      throw (error);
+      console.log(error);
     }
     if (response.statusCode === 200) {
       console.log(JSON.stringify(scraper(body), null, 2));
